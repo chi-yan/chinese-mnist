@@ -9,8 +9,6 @@ from streamlit_drawable_canvas import st_canvas
 
 characters="零一二三四五六七八九十百千万亿"
 
-url = 'https://www.dropbox.com/s/1o5953yadfn7uxe/model.h5?dl=1'
-urllib.request.urlretrieve(url, 'model.h5')
 model = keras.models.load_model('model.h5')
 
 st.markdown("""
