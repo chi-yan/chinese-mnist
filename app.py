@@ -28,4 +28,6 @@ if st.button('Predict'):
     img = cv2.resize(canvas_result.image_data.astype('uint8'), (64, 64))
     alpha = img[:,:,0]/256
     resized = alpha.reshape(1,64,64,1)
+    text = 'result: {characters[model.predict(resized)[0].argmax(axis=-1)]}'
+    st.markdown('<p font-size:24>+text+'<p>', unsafe_allow_html=True)
     st.write(f'result: {characters[model.predict(resized)[0].argmax(axis=-1)]}')
