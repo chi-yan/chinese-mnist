@@ -15,7 +15,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title('Chinese Handwritten digit recogniser (based on MNIST)')
+st.title('Chinese Handwritten Digit Recogniser (based on MNIST)')
 st.markdown('<p>Try drawing one of these digits<br>零(0) 一 二 三 四 五 六 七 八 九 十 (1-10)<br>百(100) 千(1000) 万(10000) 亿(1,0000,0000)</p>', unsafe_allow_html=True)
 
 canvas_result = st_canvas(
