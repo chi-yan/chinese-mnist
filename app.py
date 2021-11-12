@@ -9,6 +9,12 @@ characters="零一二三四五六七八九十百千万亿"
 
 model = keras.models.load_model('model.h5')
 
+st.markdown("""
+<style>
+.big {font-size:30px}
+</style>
+""", unsafe_allow_html=True)
+
 st.title('Chinese MNIST digit recogniser')
 st.markdown('<p>Try one of these digits<br>零(0) 一 二 三 四 五 六 七 八 九 十 (1-10)<br>百(100) 千(1000) 万(10000) 亿(1,0000,0000)</p>', unsafe_allow_html=True)
 
@@ -29,4 +35,4 @@ if st.button('Predict'):
     alpha = img[:,:,0]/256
     resized = alpha.reshape(1,64,64,1)
     prediction = characters[model.predict(resized)[0].argmax(axis=-1)]
-    st.markdown('<p font-size:30px> Result: '+ prediction +'<p>', unsafe_allow_html=True)
+    st.markdown('<p class="big"> Result: '+ prediction +'<p>', unsafe_allow_html=True)
