@@ -29,4 +29,4 @@ if st.button('Predict'):
     alpha = img[:,:,0]/256
     resized = alpha.reshape(1,64,64,1)
     prediction = characters[model.predict(resized)[0].argmax(axis=-1)]
-    st.markdown('<p font-size:24pt> Result: '+ prediction +'<p>', unsafe_allow_html=True)
+    st.markdown('<p font-size:30px> Result: '+ prediction +'<p>', unsafe_allow_html=True)
